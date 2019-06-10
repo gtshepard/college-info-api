@@ -1,0 +1,23 @@
+{
+  "name": "rest-interace",
+  "version": "1.0.0",
+  "description": "rest interface for college listing api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gtshepard/college-info-api.git"
+  },
+  "author": "garrison shepard",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gtshepard/college-info-api/issues"
+  },
+  "homepage": "https://github.com/gtshepard/college-info-api#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "morgan": "^1.9.1"
+  }
+}
