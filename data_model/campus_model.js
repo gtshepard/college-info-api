@@ -1,5 +1,6 @@
-module.exports = (seq, db) => {
-  seq.define('campus', {
+module.exports = (dataType, db) => {
+
+  return  db.define('campus', {
       id: {
         type: dataType.INTEGER,
         primaryKey: true,
@@ -7,7 +8,7 @@ module.exports = (seq, db) => {
       },
       name: dataType.STRING,
       address: dataType.STRING,
-      image_url: dataType.STRING,
+      imageUrl: dataType.STRING,
       description: dataType.STRING
-  })
+  });
 }
