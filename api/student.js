@@ -1,15 +1,26 @@
 const router = require('express').Router();
+const {Campus, Student} = require('../data_model/seq');
 
-  router.get('/', (req, res, next) => {
-    res.status(201).json("ALL STUDENTS");
-  });
-  router.get('/:id', (req, res, next) => {
-    res.status(201).json("Jimmy");
+  router.get('/', (req, res) => {
+     Student.findAll().then(students => res.json(students))
   });
 
-//TODO: GET  (read students and student id )
-//TODO: POST (add student)
-//TODO: DELETE (remove student)
-//TODO: PUT (update student)
+  router.get('/:id', (req, res) => {
+     Campus.findByPk(req.params.id).then((result) => res.status(201).json(result));
+  });
+
+  router.post('/', (req, res) =>{
+    Student.create(req.body).then((result) => res.status(201).json(result));
+  });
+
+  router.put('/:id', (req, res) => {
+      Student.findByPk(req.params.id).then((student) => student.update(req.body)).then((updatedStudent) => res.status(201).json(updatedStudent))
+  });
+
+  router.delete('/:id', (req, res) => {
+      Student.destroy({
+          where: { id: req.params.id }
+      }).then(student => res.status(201).json(student));
+  });
 
 module.exports = router;
