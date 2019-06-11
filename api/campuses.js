@@ -29,4 +29,8 @@ router.get('/:id', (req, res, next) => {
   }
 });
 
+//TODO: POST (add campus)
+//TODO: DELETE (remove campus)
+//TODO: PUT (update campus)
+
 module.exports = router
