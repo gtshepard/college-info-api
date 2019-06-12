@@ -7,8 +7,4 @@ const {Campus, Student} = require('../data_model/seq');
 router.use("/students", studentRouter);
 router.use("/campuses", campusRouter);
 
-//init api routes
-//studentRouter(router, Student);
-//campusRouter(router, Campus);
-
 module.exports = router;
