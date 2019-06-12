@@ -12,7 +12,7 @@ Student.belongsTo(Campus);
 Campus.hasMany(Student);
 
 //sync  db
-database.sync({force: true})
+database.sync()
         .then(() => {
            console.log("db and tables created")
 });
